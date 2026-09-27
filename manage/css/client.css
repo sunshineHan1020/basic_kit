@@ -1,0 +1,69 @@
+/* WEEKENDS CMS: page-scoped styles; no inline CSS. */
+.client-page { color: #222; }
+.client-page .content-inner { max-width: 1400px; margin: 0 auto; }
+.client-page-head { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 28px; }
+.client-page-eyebrow { color: #777; font-size: 12px; letter-spacing: 2px; }
+.client-page h2 { margin: 8px 0; font-size: 28px; font-weight: 700; }
+.client-page-head p, .client-help { color: #777; font-size: 13px; line-height: 1.7; margin: 6px 0; }
+.client-page .card { border: 1px solid #e6e7eb; border-radius: 10px; background: #fff; margin-bottom: 20px; }
+.client-page .btn, .client-dialog .btn { display: inline-flex; justify-content: center; align-items: center; gap: 6px; min-height: 38px; padding: 8px 16px; border: 1px solid #dfe1e5; border-radius: 6px; background: #fff; color: #333; text-decoration: none; font: inherit; font-size: 13px; cursor: pointer; box-sizing: border-box; white-space: nowrap; }
+.client-page .btn-primary, .client-dialog .btn-primary { background: #202124; border-color: #202124; color: #fff; }
+.client-page button:disabled { opacity: .5; cursor: wait; }
+.client-page a:focus-visible, .client-page button:focus-visible, .client-dialog button:focus-visible { outline: 3px solid #829dff; outline-offset: 3px; }
+.client-summary { display: grid; grid-template-columns: repeat(3, 1fr) 2fr; align-items: center; gap: 24px; padding: 24px; margin-bottom: 20px; border: 1px solid #e6e7eb; border-radius: 10px; background: #fff; }
+.client-summary-item span { display: block; color: #777; font-size: 13px; margin-bottom: 10px; }
+.client-summary-item strong { font-size: 28px; }
+.client-summary-item small { color: #999; font-size: 16px; font-weight: 400; }
+.client-summary p { color: #777; line-height: 1.8; font-size: 13px; }
+.client-filter-card { padding: 20px; }
+.client-filter { display: flex; gap: 10px; }
+.client-page input:not([type="file"]):not([type="hidden"]), .client-page select { box-sizing: border-box; min-height: 42px; padding: 10px 12px; border: 1px solid #dadde2; border-radius: 6px; background: #fff; color: #222; font: inherit; font-size: 14px; max-width: 100%; }
+.client-filter input { flex: 1; min-width: 200px; }
+.client-list-head { padding: 20px; font-size: 14px; }
+.client-list-head strong { margin-left: 8px; }
+.client-table-wrap { overflow-x: auto; }
+.client-table { border-collapse: collapse; width: 100%; min-width: 780px; text-align: center; font-size: 14px; }
+.client-table th { color: #777; font-size: 12px; background: #f8f9fb; font-weight: 500; padding: 14px 12px; border-top: 1px solid #eee; }
+.client-table td { padding: 18px 12px; border-bottom: 1px solid #eee; vertical-align: middle; }
+.client-logo { display: flex; align-items: center; justify-content: center; width: 112px; height: 68px; padding: 10px; box-sizing: border-box; margin: auto; background: #17191d; border-radius: 6px; text-decoration: none; }
+.client-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.client-logo span { font-size: 11px; color: #aaa; }
+.client-name { text-align: left; min-width: 180px; overflow-wrap: anywhere; }
+.client-name a { color: inherit; text-decoration: none; }
+.client-name strong { display: block; margin-bottom: 5px; }
+.client-name span { display: block; color: #999; font-size: 12px; }
+.client-status { display: inline-block; padding: 5px 10px; border-radius: 20px; font-size: 12px; white-space: nowrap; }
+.client-status.active { background: #e9f5ed; color: #287545; }
+.client-status.inactive { background: #f0f1f3; color: #858890; }
+.client-date { white-space: nowrap; color: #777; font-size: 12px; }
+.client-actions { display: flex; justify-content: center; gap: 8px; }
+.client-page .client-delete-btn { color: #b73c3c; }
+.client-table .client-empty { padding: 70px 20px; color: #999; }
+.client-pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; padding: 24px; }
+.client-pagination a { display: inline-flex; min-width: 34px; height: 34px; padding: 0 8px; align-items: center; justify-content: center; border: 1px solid #e6e7eb; border-radius: 5px; color: #555; font-size: 13px; text-decoration: none; box-sizing: border-box; }
+.client-pagination .active { background: #222; color: #fff; border-color: #222; }
+.client-form { padding: 12px 28px 28px; }
+.client-field { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid #eee; align-items: start; }
+.client-field > label { font-size: 14px; font-weight: 600; padding-top: 12px; }
+.client-required { color: #ad3737; font-size: 11px; margin-left: 4px; }
+.client-preview { width: 320px; max-width: 100%; height: 180px; padding: 24px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #17191d; border-radius: 8px; margin-bottom: 16px; color: #aaa; font-size: 13px; }
+.client-preview img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.client-field input[type="file"] { display: block; max-width: 100%; margin-bottom: 12px; }
+.client-form-actions { display: flex; justify-content: flex-end; gap: 10px; padding-top: 24px; }
+.client-dialog { position: fixed; inset: 0; z-index: 100000; padding: 24px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.5); }
+.client-dialog-box { width: 400px; max-width: 100%; box-sizing: border-box; padding: 28px; border-radius: 12px; background: #fff; color: #222; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
+.client-dialog h3 { font-size: 18px; margin: 0 0 14px; }
+.client-dialog p { font-size: 14px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 24px; }
+.client-dialog .client-actions { justify-content: flex-end; }
+.client-page [hidden], .client-dialog[hidden], .client-dialog [hidden] { display: none !important; }
+.client-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 768px) {
+    .client-page-head { align-items: flex-start; flex-direction: column; gap: 12px; }
+    .client-summary { grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 18px; }
+    .client-summary p { grid-column: 1 / -1; margin: 0; }
+    .client-filter { flex-wrap: wrap; }
+    .client-filter input { flex-basis: 60%; }
+    .client-form { padding: 8px 18px 20px; }
+    .client-field { grid-template-columns: 1fr; gap: 10px; }
+    .client-field > label { padding-top: 0; }
+}

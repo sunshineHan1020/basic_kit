@@ -1,0 +1,351 @@
+/* =========================================================
+   Weekends CMS - layout.css
+   Layout Only
+   ========================================================= */
+
+:root{
+    --sidebar-width:220px;
+    --header-height:72px;
+
+    --content-padding:32px;
+    --section-gap:24px;
+
+    --container-max:1800px;
+
+    --bg:#f6f7fb;
+    --white:#fff;
+
+    --border:#e8e8ec;
+    --text:#222;
+    --text-light:#666;
+
+    --radius:12px;
+
+    --shadow:
+        0 2px 12px rgba(0,0,0,.04);
+}
+
+/* ---------- Base ---------- */
+
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    min-height:100%;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body{
+    display:flex;
+    font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        sans-serif;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+
+    width:var(--sidebar-width);
+
+    display:flex;
+    flex-direction:column;
+
+    background:#111316;
+    z-index:1000;
+}
+
+/* ---------- Main ---------- */
+
+.main{
+    margin-left:var(--sidebar-width);
+    width:calc(100% - var(--sidebar-width));
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* ---------- Header ---------- */
+
+.header{
+    position:sticky;
+    top:0;
+
+    height:var(--header-height);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 var(--content-padding);
+
+    background:#fff;
+    border-bottom:1px solid var(--border);
+
+    z-index:100;
+}
+
+/* ---------- Content ---------- */
+
+.content{
+    margin-left:var(--sidebar-width);
+    margin-top:var(--header-height);
+
+    width:calc(100% - var(--sidebar-width));
+    min-height:calc(100vh - var(--header-height));
+
+    padding:var(--content-padding);
+
+    transition:
+        margin-left .25s ease,
+        width .25s ease;
+}
+
+.content-inner{
+
+    max-width:var(--container-max);
+
+    margin:0 auto;
+
+}
+
+/* ---------- Page ---------- */
+
+.page-header{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:28px;
+
+}
+
+.page-title{
+
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.page-action{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+/* ---------- 2 Column ---------- */
+
+.editor-layout{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        380px;
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+.editor-main{
+
+    min-width:0;
+
+}
+
+.editor-side{
+
+    min-width:0;
+
+    position:sticky;
+    top:96px;
+
+}
+
+/* ---------- Footer ---------- */
+
+.footer{
+
+    padding:20px 32px;
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+/* ---------- Utility ---------- */
+
+.hidden{
+    display:none!important;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.grid{
+    display:grid;
+}
+
+.w100{
+    width:100%;
+}
+
+/* ---------- Scroll ---------- */
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#cfcfd5;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:1600px){
+
+    .editor-layout{
+
+        grid-template-columns:
+            minmax(0,1fr)
+            340px;
+
+    }
+
+}
+
+@media (max-width:1280px){
+
+    :root{
+
+        --content-padding:24px;
+
+    }
+
+}
+
+@media (max-width:1024px){
+
+    .editor-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .editor-side{
+
+        position:static;
+
+    }
+	.content{
+        margin-left:0;
+        width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .sidebar{
+
+        transform:translateX(-100%);
+
+    }
+
+    .main{
+
+        margin-left:0;
+
+        width:100%;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+        align-items:flex-start;
+
+    }
+
+
+
+/* 	 body.mobile-open .content{
+        margin-left:var(--sidebar-width);
+        width:calc(100% - var(--sidebar-width));
+    } */
+
+
+
+}
+
+
+/* ===========================
+   Sidebar Collapse
+=========================== */
+
+body.sidebar-collapse .sidebar{
+    width:80px;
+}
+
+body.sidebar-collapse .content{
+    margin-left:80px;
+    width:calc(100% - 80px);
+}
+
+body.sidebar-collapse .sidebar .logo,
+body.sidebar-collapse .sidebar .sidebar-user,
+body.sidebar-collapse .sidebar .gnb > li > a span,
+body.sidebar-collapse .sidebar .menu-left span,
+body.sidebar-collapse .sidebar .ri-arrow-down-s-line,
+body.sidebar-collapse .sidebar .sub-menu{
+    display:none;
+}
+
+body.sidebar-collapse .sidebar .gnb > li > a{
+    justify-content:center;
+    padding:16px 0;
+}
+
+body.sidebar-collapse .sidebar .menu-left{
+    width:100%;
+    justify-content:center;
+}
+
+body.sidebar-collapse .sidebar .menu-left i{
+    margin:0;
+}
+
+
+

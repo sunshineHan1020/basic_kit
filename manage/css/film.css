@@ -1,0 +1,724 @@
+/* =========================================================
+   WEEKENDS CMS
+   FILM
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HEAD
+   ========================================================= */
+
+.film-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.film-page-title {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.film-page-title > span {
+    color: #999;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.film-page-title > i {
+    color: #bbb;
+
+    font-size: 16px;
+}
+
+.film-page-title h2 {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.film-page-action {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.film-search-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    gap: 16px;
+}
+
+.film-search-action {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.film-list-card {
+    margin-top: 20px;
+}
+
+.film-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.film-total {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.film-total strong {
+    color: #ff6a00;
+
+    font-size: 15px;
+}
+
+.film-toolbar-right {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.film-toolbar-right select {
+    width: 130px;
+}
+
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.film-table-wrap {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.film-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+.film-table th {
+    height: 46px;
+
+    padding: 10px 12px;
+
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    background: #fafafa;
+
+    color: #555;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.film-table td {
+    height: 90px;
+
+    padding: 12px;
+
+    border-bottom: 1px solid #eee;
+
+    color: #555;
+
+    font-size: 13px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+/* =========================================================
+   THUMBNAIL
+   ========================================================= */
+
+.film-thumb {
+    width: 110px;
+    height: 64px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #f5f5f5;
+}
+
+.film-thumb img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.film-title {
+    text-align: left;
+}
+
+.film-title a {
+    color: #222;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.film-title a:hover {
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+
+/* =========================================================
+   LINK
+   ========================================================= */
+
+.film-link {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 0;
+
+    color: #777;
+
+    font-size: 12px;
+
+    text-align: left;
+}
+
+.film-link span {
+    display: block;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.film-link i {
+    flex: 0 0 auto;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.film-link:hover {
+    color: #ff6a00;
+}
+
+.film-muted {
+    color: #aaa;
+}
+
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.film-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 55px;
+    height: 26px;
+
+    padding: 0 10px;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.film-status.active {
+    background: #eefaf4;
+
+    color: #16874e;
+}
+
+.film-status.inactive {
+    background: #f2f2f2;
+
+    color: #888;
+}
+
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.film-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.film-empty {
+    height: 180px !important;
+
+    color: #aaa !important;
+}
+
+.film-empty i {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ccc;
+
+    font-size: 30px;
+}
+
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.film-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 24px;
+}
+
+.film-pagination a,
+.film-pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.film-pagination a:hover {
+    border-color: #ff6a00;
+
+    color: #ff6a00;
+}
+
+.film-pagination .active {
+    border-color: #ff6a00;
+
+    background: #ff6a00;
+
+    color: #fff;
+
+    font-weight: 600;
+}
+
+.film-pagination .disabled {
+    color: #ccc;
+
+    background: #fafafa;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 768px) {
+
+    .film-page-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .film-search-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .film-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .film-table {
+        min-width: 950px;
+    }
+
+}
+
+/* =========================================================
+   FILM FORM
+   ========================================================= */
+
+.film-form-card {
+    max-width: 1000px;
+}
+
+.film-form-row {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 24px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.film-form-row:first-child {
+    padding-top: 0;
+}
+
+.film-form-row:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.film-form-row > label {
+    padding-top: 11px;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.film-form-row > label em {
+    color: #ff6a00;
+
+    font-style: normal;
+}
+
+.film-form-control {
+    min-width: 0;
+}
+
+.film-form-small {
+    max-width: 300px;
+}
+
+.film-form-help {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   UPLOAD
+   ========================================================= */
+
+.film-upload-area {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 190px;
+
+    border: 1px dashed #d7d7d7;
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    transition: .2s;
+}
+
+.film-upload-area:hover {
+    border-color: #ff6a00;
+
+    background: #fff8f4;
+}
+
+.film-upload-area input[type="file"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.film-upload-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 9px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #666;
+
+    cursor: pointer;
+}
+
+.film-upload-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #ff6a00;
+
+    font-size: 23px;
+}
+
+.film-upload-button span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.film-upload-guide {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 9px;
+}
+
+.film-upload-guide p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   IMAGE PREVIEW
+   ========================================================= */
+
+.film-image-preview {
+    display: none;
+
+    position: relative;
+
+    margin-top: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid #eee;
+    border-radius: 10px;
+
+    background: #f7f7f7;
+}
+
+.film-image-preview.active {
+    display: block;
+}
+
+.film-image-preview img {
+    display: block;
+
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: contain;
+}
+
+.film-image-name {
+    padding: 10px 13px;
+
+    border-top: 1px solid #eee;
+
+    background: #fff;
+
+    color: #888;
+
+    font-size: 11px;
+
+    word-break: break-all;
+}
+
+
+
+/* =========================================================
+   RADIO
+   ========================================================= */
+
+.film-radio-group {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 42px;
+}
+
+.film-radio-group label {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.film-radio-group input {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.film-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    max-width: 1000px;
+
+    margin-top: 20px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 768px) {
+
+    .film-form-row {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .film-form-row > label {
+        padding-top: 0;
+    }
+
+    .film-form-small {
+        max-width: none;
+    }
+
+}
+
+.film-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.film-action .btn {
+    flex: 0 0 auto;
+
+    min-width: 58px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    white-space: nowrap;
+    word-break: keep-all;
+}

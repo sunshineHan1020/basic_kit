@@ -1,0 +1,526 @@
+/* =========================================================
+   SETTING
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HEAD
+   ========================================================= */
+
+.setting-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.setting-page-title {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.setting-page-title span {
+    color: #999;
+
+    font-size: 12px;
+}
+
+.setting-page-title i {
+    color: #bbb;
+
+    font-size: 16px;
+}
+
+.setting-page-title h2 {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.setting-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+.setting-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.setting-side {
+    position: sticky;
+
+    top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.setting-card,
+.setting-preview-card {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   ROW
+   ========================================================= */
+
+.setting-row {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+
+    gap: 26px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.setting-row:first-child {
+    padding-top: 0;
+}
+
+.setting-row:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.setting-label {
+    padding-top: 10px;
+}
+
+.setting-label label {
+    color: #333;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.setting-label strong {
+    margin-left: 2px;
+
+    color: #ff6a00;
+}
+
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.setting-field {
+    position: relative;
+
+    min-width: 0;
+}
+
+.setting-field > input[type="text"],
+.setting-field > input[type="url"],
+.setting-field > textarea {
+    width: 100%;
+    max-width: 720px;
+}
+
+.setting-field input[type="text"],
+.setting-field input[type="url"] {
+    height: 42px;
+}
+
+.setting-field textarea {
+    min-height: 120px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #444;
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.setting-field input:focus,
+.setting-field textarea:focus {
+    border-color: #ff6a00;
+
+    outline: none;
+}
+
+.setting-help {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.setting-counter {
+    margin-top: 7px;
+
+    color: #aaa;
+
+    font-size: 10px;
+}
+
+.setting-counter span {
+    color: #666;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   OG IMAGE
+   ========================================================= */
+
+.setting-og-preview {
+    position: relative;
+
+    width: 100%;
+    max-width: 720px;
+
+    overflow: hidden;
+
+    aspect-ratio: 1200 / 630;
+
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+
+    background: #f7f7f7;
+}
+
+.setting-og-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.setting-og-preview.empty img {
+    display: none;
+}
+
+.setting-og-empty {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 100%;
+    height: 100%;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+.setting-og-preview.empty .setting-og-empty {
+    display: flex;
+}
+
+.setting-og-empty i {
+    color: #bbb;
+
+    font-size: 26px;
+}
+
+.setting-og-empty span {
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   FILE
+   ========================================================= */
+
+.setting-file-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.setting-file-row input[type="file"] {
+    max-width: 420px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+.setting-image-delete {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.setting-image-delete input {
+    width: 14px;
+    height: 14px;
+
+    accent-color: #ff6a00;
+}
+
+.setting-image-delete span {
+    color: #777;
+
+    font-size: 10px;
+}
+
+.setting-current-file {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 10px;
+}
+
+.setting-current-file strong {
+    color: #555;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   SEARCH PREVIEW
+   ========================================================= */
+
+.setting-search-preview {
+    padding: 4px 0;
+}
+
+.setting-search-url {
+    display: block;
+
+    overflow: hidden;
+
+    margin-bottom: 7px;
+
+    color: #16874e;
+
+    font-size: 10px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.setting-search-preview > strong {
+    display: block;
+
+    overflow: hidden;
+
+    margin-bottom: 8px;
+
+    color: #3158c7;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.setting-search-preview > p {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+
+/* =========================================================
+   SETTING INFO
+   ========================================================= */
+
+.setting-info-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting-info-list > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.setting-info-list > div:first-child {
+    padding-top: 0;
+}
+
+.setting-info-list > div:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.setting-info-list span {
+    color: #999;
+
+    font-size: 10px;
+}
+
+.setting-info-list strong {
+    color: #444;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+
+/* =========================================================
+   SAVE
+   ========================================================= */
+
+.setting-save {
+    width: 100%;
+    height: 46px;
+}
+
+.setting-save[disabled] {
+    opacity: .6;
+
+    cursor: default;
+}
+
+
+
+/* =========================================================
+   CARD DETAIL
+   ========================================================= */
+
+.setting-card .card-header,
+.setting-preview-card .card-header {
+    min-height: 54px;
+}
+
+.setting-card .card-header h3,
+.setting-preview-card .card-header h3 {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 1100px) {
+
+    .setting-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .setting-side {
+        position: static;
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+
+    .setting-page-title {
+        flex-wrap: wrap;
+    }
+
+    .setting-row {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .setting-label {
+        padding-top: 0;
+    }
+
+    .setting-field > input[type="text"],
+    .setting-field > input[type="url"],
+    .setting-field > textarea {
+        max-width: none;
+    }
+
+    .setting-file-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

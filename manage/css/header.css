@@ -1,0 +1,123 @@
+/* =========================================================
+   Weekends CMS - header.css
+   ========================================================= */
+
+.admin-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    background:#fff;
+    border-bottom:1px solid #e8e8ec;
+
+    z-index:1100;
+}
+
+/* ===========================
+   Left
+=========================== */
+
+.admin-header .logo{
+    display:flex;
+    align-items:center;
+    margin-left:16px;
+    text-decoration:none;
+    flex-shrink:0;
+}
+
+.admin-header .logo img{
+    display:block;
+    height:42px;      /* 30 → 42 */
+    width:auto;
+}
+
+/* ===========================
+   Sidebar Toggle
+=========================== */
+
+.sidebar-toggle{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:none;
+    background:transparent;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.sidebar-toggle:hover{
+    background:#f5f5f7;
+}
+
+.sidebar-toggle i{
+    font-size:24px;
+    color:#333;
+}
+
+/* ===========================
+   Right
+=========================== */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-left:auto;
+}
+
+/* 임시 스타일 */
+
+.header-right>*{
+    display:flex;
+    align-items:center;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:1024px){
+
+    .admin-header{
+        padding:0 16px;
+    }
+
+    .admin-header .logo img{
+        height:26px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .admin-header{
+        height:64px;
+    }
+
+    .admin-header .logo{
+        margin-left:10px;
+    }
+
+    .sidebar-toggle{
+        width:38px;
+        height:38px;
+    }
+
+}
+

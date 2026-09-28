@@ -4,7 +4,9 @@ function db_con($conInfo){ //db 접속
     $conDb=new PDO($conInfo[0],$conInfo[1],$conInfo[2],array(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY=>true));
     return $conDb;
   }catch(PDOException $e){  //관리자메일 및 sms전송 추가 할것
-	  echo  $e->getMessage();
+	 
+	print_x($e);
+	echo  $e->getMessage();
     echo"죄송합니다. 접속량이 많아 접속이 원할하지 않습니다. 잠시 후에 다시 접속해 주십시요. [code:m0001]";
     exit;
   }
@@ -1350,15 +1352,29 @@ function getRealClientIp() {
 
 
 
-function getSports($type){
-	if($type=="SC") return "축구";
-	if($type=="BS") return "야구";
-	if($type=="BK") return "농구";
-	if($type=="FU") return "풋살";
-	if($type=="ET") return "기타";
-	if($type=="CH") return "챌린지";
-	
-	
+function admin_password_encrypt($password)
+{
+    return openssl_encrypt(
+        $password,
+        'AES-256-CBC',
+        ADMIN_CRYPT_KEY,
+        0,
+        ADMIN_CRYPT_IV
+    );
 }
+
+
+function admin_password_decrypt($encrypted)
+{
+    return openssl_decrypt(
+        $encrypted,
+        'AES-256-CBC',
+        ADMIN_CRYPT_KEY,
+        0,
+        ADMIN_CRYPT_IV
+    );
+}
+
+
 
 ?>

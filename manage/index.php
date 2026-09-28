@@ -30,6 +30,49 @@ function dashboard_h($str)
 }
 
 
+function dashboard_file_size($byte_size)
+{
+
+    $byte_size =
+        intval(
+            $byte_size
+        );
+
+
+    if(
+        $byte_size >= 1048576
+    ){
+
+        return
+            round(
+                $byte_size / 1048576,
+                1
+            ).
+            ' MB';
+
+    }
+
+
+    if(
+        $byte_size >= 1024
+    ){
+
+        return
+            round(
+                $byte_size / 1024,
+                1
+            ).
+            ' KB';
+
+    }
+
+
+    return
+        $byte_size.
+        ' B';
+
+}
+
 
 /*
  * =========================================================
@@ -109,6 +152,64 @@ if($data){
         );
 
 }
+
+
+/*
+ * =========================================================
+ * COMPANY BROCHURE
+ * =========================================================
+ */
+
+$company_brochure =
+    false;
+
+
+$query = "
+
+    SELECT
+
+        cb.id,
+        cb.title,
+        cb.media_id,
+        cb.created_at,
+        cb.updated_at,
+
+        m.storage_key,
+        m.original_name,
+        m.mime_type,
+        m.byte_size
+
+    FROM company_brochures cb
+
+    INNER JOIN media m
+        ON m.id = cb.media_id
+        AND m.deleted_at IS NULL
+
+    WHERE
+        cb.is_active = 1
+
+    ORDER BY
+        cb.sort_order ASC,
+        cb.id DESC
+
+    LIMIT 1
+
+";
+
+
+$ps =
+    pdo_query(
+        $db,
+        $query,
+        array()
+    );
+
+
+$company_brochure =
+    $ps->fetch(
+        PDO::FETCH_ASSOC
+    );
+
 
 
 
@@ -1066,60 +1167,223 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
 
             <!-- FILM -->
 
-            <a
-                href="/manage/film_list"
-                class="dashboard-summary-card"
-            >
-
-                <div class="dashboard-summary-top">
-
-                    <span class="dashboard-summary-icon">
-
-                        <i class="ri-movie-line"></i>
-
-                    </span>
+            <!-- =================================================
+     COMPANY BROCHURE
+================================================== -->
 
 
-                    <span class="dashboard-summary-arrow">
+			<div class="card dashboard-card">
 
-                        <i class="ri-arrow-right-up-line"></i>
+				<div class="card-header dashboard-card-head">
 
-                    </span>
+					<div>
 
-                </div>
+						<h3>
+							회사소개서 관리
+						</h3>
 
+						<p>
+							CONTACT 완료 화면 다운로드 파일
+						</p>
 
-                <div class="dashboard-summary-body">
+					</div>
 
-                    <span>
-                        FILM
-                    </span>
-
-                    <strong>
-                        <?=number_format($film_summary['total'])?>
-                    </strong>
-
-                </div>
+				</div>
 
 
-                <div class="dashboard-summary-meta">
+				<div class="card-body">
 
-                    <span>
 
-                        노출중
+					<?
+					if(
+						$company_brochure
+					){
+					?>
 
-                        <strong>
-                            <?=number_format($film_summary['active'])?>
-                        </strong>
+						<div class="dashboard-brochure-current">
 
-                    </span>
 
-                </div>
+							<div class="dashboard-brochure-icon">
 
-            </a>
+								<i class="ri-file-pdf-2-line"></i>
+
+							</div>
+
+
+							<div class="dashboard-brochure-info">
+
+								<strong>
+
+									<?=dashboard_h(
+										$company_brochure['original_name']
+									)?>
+
+								</strong>
+
+
+								<span>
+
+									<?=dashboard_file_size(
+										$company_brochure['byte_size']
+									)?>
+
+									·
+
+									<?=dashboard_h(
+										substr(
+											$company_brochure['updated_at'],
+											0,
+											16
+										)
+									)?>
+
+								</span>
+
+							</div>
+
+
+							<a
+								href="<?=dashboard_h($company_brochure['storage_key'])?>"
+								target="_blank"
+								class="dashboard-brochure-download"
+								title="다운로드"
+							>
+
+								<i class="ri-download-line"></i>
+
+							</a>
+
+
+						</div>
+
+
+					<?
+					}else{
+					?>
+
+						<div class="dashboard-brochure-empty">
+
+							<i class="ri-file-pdf-2-line"></i>
+
+							<span>
+								등록된 회사소개서가 없습니다.
+							</span>
+
+						</div>
+
+					<?
+					}
+					?>
+
+
+
+					<form
+						id="companyBrochureForm"
+						enctype="multipart/form-data"
+					>
+
+			
+
+
+						<input
+							type="hidden"
+							name="mode"
+							value="upload"
+						>
+
+
+						<input
+							type="file"
+							name="brochure_file"
+							id="companyBrochureFile"
+							accept=".pdf,application/pdf"
+							hidden
+						>
+
+
+						<div class="dashboard-brochure-actions">
+
+
+							<button
+								type="button"
+								class="btn btn-white"
+								id="companyBrochureSelectBtn"
+							>
+
+								<i class="ri-upload-2-line"></i>
+
+								<span>
+
+									<?
+									if(
+										$company_brochure
+									){
+									?>
+
+										파일 교체
+
+									<?
+									}else{
+									?>
+
+										파일 등록
+
+									<?
+									}
+									?>
+
+								</span>
+
+							</button>
+
+
+							<?
+							if(
+								$company_brochure
+							){
+							?>
+
+								<button
+									type="button"
+									class="btn btn-danger"
+									id="companyBrochureDeleteBtn"
+									data-id="<?=intval($company_brochure['id'])?>"
+								>
+
+									<i class="ri-delete-bin-line"></i>
+
+									삭제
+
+								</button>
+
+							<?
+							}
+							?>
+
+
+						</div>
+
+
+						<div
+							class="dashboard-brochure-selected"
+							id="companyBrochureSelected"
+						></div>
+
+
+						<p class="dashboard-brochure-help">
+							PDF 파일만 등록할 수 있습니다. 최대 20MB
+						</p>
+
+
+					</form>
+
+
+				</div>
+
 
 
         </div>
+		</div>
 
 
 
@@ -1774,3 +2038,358 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
 <?
 include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/footer.php';
 ?>
+<script src="/@resource/js/lib/jquery-4.0.0.min.js"></script> 
+<script>
+
+$(function(){
+
+
+    /*
+     * =====================================================
+     * COMPANY BROCHURE
+     * =====================================================
+     */
+
+    var $brochureForm =
+        $('#companyBrochureForm');
+
+
+    var $brochureFile =
+        $('#companyBrochureFile');
+
+
+    var $brochureSelected =
+        $('#companyBrochureSelected');
+
+
+
+    /*
+     * 파일 선택
+     */
+
+    $('#companyBrochureSelectBtn').on(
+        'click',
+        function()
+        {
+
+            $brochureFile.trigger(
+                'click'
+            );
+
+        }
+    );
+
+
+
+    /*
+     * 파일 변경
+     */
+
+    $brochureFile.on(
+        'change',
+        function()
+        {
+
+            var file =
+                this.files &&
+                this.files.length > 0
+                    ? this.files[0]
+                    : null;
+
+
+            if(
+                !file
+            ){
+
+                return;
+
+            }
+
+
+            var fileName =
+                file.name;
+
+
+            var extension =
+                fileName
+                    .split('.')
+                    .pop()
+                    .toLowerCase();
+
+
+            var maxSize =
+                50 * 1024 * 1024;
+
+
+
+            if(
+                extension != 'pdf'
+            ){
+
+                alert(
+                    'PDF 파일만 등록할 수 있습니다.'
+                );
+
+
+                this.value =
+                    '';
+
+
+                return;
+
+            }
+
+
+
+            if(
+                file.size > maxSize
+            ){
+
+                alert(
+                    '회사소개서는 50MB 이하만 등록할 수 있습니다.'
+                );
+
+
+                this.value =
+                    '';
+
+
+                return;
+
+            }
+
+
+
+            $brochureSelected
+                .text(
+                    fileName
+                )
+                .addClass(
+                    'active'
+                );
+
+
+
+            /*
+             * 선택 즉시 업로드 확인
+             */
+
+            confirm(
+                '선택한 파일을 회사소개서로 등록할까요?',
+                function()
+                {
+
+                    companyBrochureUpload();
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /*
+     * 업로드
+     */
+
+    function companyBrochureUpload()
+    {
+
+        var fileInput =
+            $brochureFile[0];
+
+
+        if(
+            !fileInput ||
+            !fileInput.files ||
+            fileInput.files.length <= 0
+        ){
+
+            alert(
+                '등록할 PDF 파일을 선택해주세요.'
+            );
+
+            return;
+
+        }
+
+
+        var formData =
+            new FormData(
+                $brochureForm[0]
+            );
+
+
+        $.ajax({
+
+            url:
+                '/manage/proc/company_brochure',
+
+            type:
+                'POST',
+
+            data:
+                formData,
+
+            processData:
+                false,
+
+            contentType:
+                false,
+
+            dataType:
+                'json',
+
+            success:
+                function(response)
+                {
+
+                    if(
+                        response.result == 'success'
+                    ){
+
+                        alert(
+                            response.message,
+                            function()
+                            {
+
+                                location.reload();
+
+                            }
+                        );
+
+
+                        return;
+
+                    }
+
+
+                    alert(
+                        response.message
+                            ? response.message
+                            : '회사소개서 등록에 실패했습니다.'
+                    );
+
+                },
+
+            error:
+                function()
+                {
+
+                    alert(
+                        '회사소개서 등록 중 오류가 발생했습니다.'
+                    );
+
+                }
+
+        });
+
+    }
+
+
+
+    /*
+     * 삭제
+     */
+
+    $('#companyBrochureDeleteBtn').on(
+        'click',
+        function()
+        {
+
+            var brochureId =
+                parseInt(
+                    $(this).data('id'),
+                    10
+                );
+
+
+            if(
+                !brochureId
+            ){
+
+                return;
+
+            }
+
+
+            confirm(
+                '현재 회사소개서를 삭제할까요?',
+                function()
+                {
+
+                    $.ajax({
+
+                        url:
+                            '/manage/proc/company_brochure',
+
+                        type:
+                            'POST',
+
+                        dataType:
+                            'json',
+
+                        data:
+                            {
+                                mode:
+                                    'delete',
+
+                                brochure_id:
+                                    brochureId
+                            },
+
+                        success:
+                            function(response)
+                            {
+
+                                if(
+                                    response.result == 'success'
+                                ){
+
+                                    alert(
+                                        response.message,
+                                        function()
+                                        {
+
+                                            location.reload();
+
+                                        }
+                                    );
+
+
+                                    return;
+
+                                }
+
+
+                                alert(
+                                    response.message
+                                        ? response.message
+                                        : '회사소개서 삭제에 실패했습니다.'
+                                );
+
+                            },
+
+                        error:
+                            function()
+                            {
+
+                                alert(
+                                    '회사소개서 삭제 중 오류가 발생했습니다.'
+                                );
+
+                            }
+
+                    });
+
+                }
+            );
+
+        }
+    );
+
+
+});
+
+</script>

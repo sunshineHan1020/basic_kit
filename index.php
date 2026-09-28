@@ -113,6 +113,26 @@ Router::add('GET', '/contact', function() {
 
 });
 
+Router::add('GET', '/contact_form', function() {
+
+    require $_SERVER['DOCUMENT_ROOT'].'/src/controller/contact_form.php';
+
+});
+
+
+
+// ========================================
+// 처리 페이지
+// /proc/auth_proc
+// → /proc/auth_proc.php
+// ========================================
+
+Router::add('POST', '/proc/([a-zA-Z0-9_-]+)', function($proc_name) {
+
+    require $_SERVER['DOCUMENT_ROOT'].'/src/proc/'.$proc_name.'.php';
+
+});
+
 
 
 // ========================================

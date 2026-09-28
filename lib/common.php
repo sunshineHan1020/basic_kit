@@ -20,7 +20,20 @@ date_default_timezone_set('Asia/Seoul');
 // Library
 include $_SERVER['DOCUMENT_ROOT'].'/lib/config.php';
 include $_SERVER['DOCUMENT_ROOT'].'/lib/lib.php';
+include $_SERVER['DOCUMENT_ROOT'].'/lib/wroks_secstion_type.php';
 include $_SERVER['DOCUMENT_ROOT'].'/lib/encryption.php';
+
+
+define(
+    'ADMIN_CRYPT_KEY',
+    'weekends_admin_crypt_key_2026!!'
+);
+
+define(
+    'ADMIN_CRYPT_IV',
+    'weekends2026admin'
+);
+
 
 
 // DB

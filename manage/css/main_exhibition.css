@@ -1,0 +1,2089 @@
+/* =========================================================
+   MAIN EXHIBITION
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HEAD
+   ========================================================= */
+
+.main-exhibition-page-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+
+.main-exhibition-page-head > div:first-child {
+    min-width: 0;
+}
+
+.main-exhibition-eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #ff6a00;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.main-exhibition-page-head h2 {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.main-exhibition-page-head p {
+    margin: 7px 0 0;
+
+    color: #999;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.main-exhibition-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(300px, 1.5fr);
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.main-exhibition-summary-item,
+.main-exhibition-summary-notice {
+    min-height: 92px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 9px;
+
+    background: #fff;
+}
+
+.main-exhibition-summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.main-exhibition-summary-item span {
+    color: #888;
+
+    font-size: 10px;
+}
+
+.main-exhibition-summary-item strong {
+    color: #222;
+
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.main-exhibition-summary-item strong em {
+    margin-left: 3px;
+
+    color: #aaa;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.main-exhibition-summary-notice {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 20px;
+
+    background: #fffaf7;
+    border-color: #ffe0ca;
+
+    color: #b85c18;
+}
+
+.main-exhibition-summary-notice i {
+    flex: 0 0 auto;
+
+    font-size: 17px;
+}
+
+.main-exhibition-summary-notice span {
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+.main-exhibition-filter-card {
+    margin-bottom: 18px;
+}
+
+.main-exhibition-filter {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.main-exhibition-filter-select {
+    width: 130px;
+    height: 40px;
+
+    flex: 0 0 auto;
+}
+
+.main-exhibition-search {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+}
+
+.main-exhibition-search > i {
+    position: absolute;
+
+    top: 50%;
+    left: 13px;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.main-exhibition-search input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 38px;
+}
+
+
+
+/* =========================================================
+   LIST CARD
+   ========================================================= */
+
+.main-exhibition-list-card {
+    overflow: hidden;
+}
+
+.main-exhibition-list-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.main-exhibition-list-count {
+    color: #777;
+
+    font-size: 10px;
+}
+
+.main-exhibition-list-count strong {
+    margin: 0 2px;
+
+    color: #222;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.main-exhibition-list-head p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 9px;
+}
+
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.main-exhibition-table-wrap {
+    overflow-x: auto;
+}
+
+.main-exhibition-table {
+    width: 100%;
+    min-width: 1360px;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.main-exhibition-table th,
+.main-exhibition-table td {
+    border-bottom: 1px solid #eee;
+
+    vertical-align: middle;
+}
+
+.main-exhibition-table th {
+    height: 46px;
+
+    padding: 0 12px;
+
+    background: #fafafa;
+
+    color: #888;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.main-exhibition-table td {
+    padding: 14px 12px;
+
+    color: #555;
+
+    font-size: 10px;
+}
+
+.main-exhibition-table tbody tr {
+    transition: background .15s;
+}
+
+.main-exhibition-table tbody tr:hover {
+    background: #fcfcfc;
+}
+
+.main-exhibition-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+
+/* =========================================================
+   COLUMN WIDTH
+   ========================================================= */
+
+.main-exhibition-table .col-number {
+    width: 58px;
+}
+
+.main-exhibition-table .col-thumb {
+    width: 270px;
+}
+
+.main-exhibition-table .col-client {
+    width: 170px;
+}
+
+.main-exhibition-table .col-video {
+    width: 80px;
+}
+
+.main-exhibition-table .col-color {
+    width: 160px;
+}
+
+.main-exhibition-table .col-order {
+    width: 70px;
+}
+
+.main-exhibition-table .col-status {
+    width: 90px;
+}
+
+.main-exhibition-table .col-manage {
+    width: 88px;
+}
+
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.main-exhibition-number {
+    color: #aaa !important;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   PROJECT
+   ========================================================= */
+
+.main-exhibition-project {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.main-exhibition-thumb {
+    width: 74px;
+    height: 54px;
+
+    flex: 0 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+
+    background: #f5f5f5;
+}
+
+.main-exhibition-thumb img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.main-exhibition-no-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #bbb;
+}
+
+.main-exhibition-no-thumb i {
+    font-size: 20px;
+}
+
+.main-exhibition-project-info {
+    min-width: 0;
+}
+
+.main-exhibition-project-info > strong {
+    display: block;
+
+    overflow: hidden;
+
+    margin-bottom: 4px;
+
+    color: #222;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-project-info > span {
+    display: block;
+
+    overflow: hidden;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-project-state {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    margin-top: 7px;
+}
+
+.main-exhibition-project-state span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.main-exhibition-project-state .published {
+    background: #eefaf4;
+
+    color: #16874e;
+}
+
+.main-exhibition-project-state .draft {
+    background: #f2f2f2;
+
+    color: #888;
+}
+
+.main-exhibition-project-state .archived {
+    background: #fff0ed;
+
+    color: #b65b46;
+}
+
+.main-exhibition-project-state .private {
+    background: #f4f0ff;
+
+    color: #7857b8;
+}
+
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.main-exhibition-intro {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    color: #666;
+
+    font-size: 10px;
+    line-height: 1.6;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.main-exhibition-intro .empty {
+    color: #bbb;
+}
+
+
+
+/* =========================================================
+   CLIENT
+   ========================================================= */
+
+.main-exhibition-clients {
+    min-width: 0;
+}
+
+.main-exhibition-clients strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #333;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.main-exhibition-clients span {
+    display: block;
+
+    overflow: hidden;
+
+    color: #888;
+
+    font-size: 9px;
+    line-height: 1.5;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-clients .empty {
+    color: #bbb;
+}
+
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.main-exhibition-video {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+
+    color: #aaa;
+
+    font-size: 9px;
+}
+
+.main-exhibition-video i {
+    font-size: 14px;
+}
+
+.main-exhibition-video.registered {
+    color: #16874e;
+}
+
+
+
+/* =========================================================
+   COLOR
+   ========================================================= */
+
+.main-exhibition-colors {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.main-exhibition-colors span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    color: #aaa;
+
+    font-size: 8px;
+}
+
+.main-exhibition-colors strong {
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   ORDER
+   ========================================================= */
+
+.main-exhibition-order {
+    color: #555 !important;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.main-exhibition-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 54px;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.main-exhibition-status i {
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: #bbb;
+}
+
+.main-exhibition-status.active {
+    color: #16874e;
+}
+
+.main-exhibition-status.active i {
+    background: #24a865;
+}
+
+.main-exhibition-status.inactive {
+    color: #999;
+}
+
+.main-exhibition-status.inactive i {
+    background: #bbb;
+}
+
+
+
+/* =========================================================
+   MANAGE
+   ========================================================= */
+
+.main-exhibition-manage {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.main-exhibition-manage-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #777;
+
+    cursor: pointer;
+
+    transition: .15s;
+}
+
+.main-exhibition-manage-btn:hover {
+    border-color: #ff6a00;
+
+    color: #ff6a00;
+}
+
+.main-exhibition-manage-btn i {
+    font-size: 14px;
+}
+
+.main-exhibition-delete-btn:hover {
+    border-color: #d95642;
+
+    color: #d95642;
+}
+
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.main-exhibition-empty {
+    height: 240px;
+
+    text-align: center;
+}
+
+.main-exhibition-empty i {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #bbb;
+
+    font-size: 25px;
+}
+
+.main-exhibition-empty strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+.main-exhibition-empty span {
+    color: #aaa;
+
+    font-size: 9px;
+}
+
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.main-exhibition-list-card .pagination {
+    padding: 22px 20px;
+
+    border-top: 1px solid #eee;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 1200px) {
+
+    .main-exhibition-summary {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-exhibition-summary-notice {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+
+    .main-exhibition-page-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .main-exhibition-page-head > a {
+        width: 100%;
+    }
+
+    .main-exhibition-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .main-exhibition-summary-notice {
+        grid-column: auto;
+    }
+
+    .main-exhibition-filter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .main-exhibition-filter-select,
+    .main-exhibition-search {
+        width: 100%;
+        max-width: none;
+    }
+
+    .main-exhibition-list-head {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   WRITE
+   ========================================================= */
+
+
+/* =========================================================
+   WRITE LAYOUT
+   ========================================================= */
+
+.main-exhibition-write-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+.main-exhibition-write-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+.main-exhibition-write-side {
+    position: sticky;
+
+    top: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.main-exhibition-write-card,
+.main-exhibition-side-card {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.main-exhibition-write-card .card-header,
+.main-exhibition-side-card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 54px;
+}
+
+.main-exhibition-write-card .card-header h3,
+.main-exhibition-side-card .card-header h3 {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.main-exhibition-write-card .card-header p {
+    margin: 4px 0 0;
+
+    color: #aaa;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.main-exhibition-field {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+
+    gap: 24px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.main-exhibition-field:first-child {
+    padding-top: 0;
+}
+
+.main-exhibition-field:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.main-exhibition-field-label {
+    padding-top: 9px;
+}
+
+.main-exhibition-field-label label {
+    color: #333;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.main-exhibition-field-label strong {
+    margin-left: 2px;
+
+    color: #ff6a00;
+}
+
+.main-exhibition-field-content {
+    min-width: 0;
+}
+
+.main-exhibition-field-content > textarea {
+    width: 100%;
+    min-height: 140px;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #444;
+
+    font-family: inherit;
+    font-size: 11px;
+    line-height: 1.7;
+
+    resize: vertical;
+}
+
+.main-exhibition-field-content > textarea:focus {
+    border-color: #ff6a00;
+
+    outline: none;
+}
+
+.main-exhibition-help {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   WORK SELECT
+   ========================================================= */
+
+.main-exhibition-work-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.main-exhibition-work-item {
+    display: block;
+
+    cursor: pointer;
+}
+
+.main-exhibition-work-item > input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.main-exhibition-work-ui {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 86px;
+
+    padding: 10px 42px 10px 10px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    background: #fff;
+
+    transition:
+        border-color .2s,
+        background .2s,
+        box-shadow .2s;
+}
+
+.main-exhibition-work-item:hover .main-exhibition-work-ui {
+    border-color: #ccc;
+}
+
+.main-exhibition-work-item > input:checked + .main-exhibition-work-ui {
+    border-color: #ff6a00;
+
+    background: #fffaf7;
+
+    box-shadow: 0 0 0 1px #ff6a00 inset;
+}
+
+
+
+/* =========================================================
+   WORK THUMB
+   ========================================================= */
+
+.main-exhibition-work-thumb {
+    display: block;
+
+    width: 92px;
+    height: 64px;
+
+    flex: 0 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: #f2f2f2;
+}
+
+.main-exhibition-work-thumb img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.main-exhibition-work-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #bbb;
+}
+
+.main-exhibition-work-no-image i {
+    font-size: 21px;
+}
+
+
+
+/* =========================================================
+   WORK INFO
+   ========================================================= */
+
+.main-exhibition-work-info {
+    display: block;
+
+    min-width: 0;
+}
+
+.main-exhibition-work-info > strong {
+    display: block;
+
+    overflow: hidden;
+
+    margin-bottom: 4px;
+
+    color: #222;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-work-info > span:not(.main-exhibition-work-meta) {
+    display: block;
+
+    overflow: hidden;
+
+    color: #aaa;
+
+    font-size: 9px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-work-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    margin-top: 7px;
+}
+
+.main-exhibition-work-meta em {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 19px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.main-exhibition-work-meta .published {
+    background: #eefaf4;
+
+    color: #16874e;
+}
+
+.main-exhibition-work-meta .draft {
+    background: #f2f2f2;
+
+    color: #888;
+}
+
+.main-exhibition-work-meta .archived {
+    background: #fff0ed;
+
+    color: #b65b46;
+}
+
+.main-exhibition-work-meta .private {
+    background: #f4f0ff;
+
+    color: #7857b8;
+}
+
+
+
+/* =========================================================
+   WORK CHECK
+   ========================================================= */
+
+.main-exhibition-work-check {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid #ddd;
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: transparent;
+
+    transform: translateY(-50%);
+
+    transition: .2s;
+}
+
+.main-exhibition-work-item > input:checked + .main-exhibition-work-ui .main-exhibition-work-check {
+    border-color: #ff6a00;
+
+    background: #ff6a00;
+
+    color: #fff;
+}
+
+.main-exhibition-work-check i {
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   WORK EMPTY
+   ========================================================= */
+
+.main-exhibition-work-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 180px;
+
+    padding: 30px;
+
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+
+    background: #fafafa;
+
+    text-align: center;
+}
+
+.main-exhibition-work-empty i {
+    margin-bottom: 9px;
+
+    color: #bbb;
+
+    font-size: 25px;
+}
+
+.main-exhibition-work-empty strong {
+    margin-bottom: 5px;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+.main-exhibition-work-empty span {
+    color: #aaa;
+
+    font-size: 9px;
+}
+
+
+
+/* =========================================================
+   CLIENT SELECT
+   ========================================================= */
+/* =========================================================
+   CLIENT SELECT
+   2 ROW HORIZONTAL SCROLL
+   ========================================================= */
+
+.main-exhibition-client-list {
+    display: grid;
+
+    grid-template-rows: repeat(2, 66px);
+    grid-auto-flow: column;
+    grid-auto-columns: 190px;
+
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 2px 2px 10px;
+
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.main-exhibition-client-item {
+    display: block;
+
+    min-width: 0;
+
+    cursor: pointer;
+
+    scroll-snap-align: start;
+}
+
+.main-exhibition-client-item > input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.main-exhibition-client-ui {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+    height: 66px;
+
+    padding: 9px 34px 9px 9px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+
+    background: #fff;
+
+    transition:
+        border-color .2s,
+        background .2s,
+        box-shadow .2s;
+}
+
+.main-exhibition-client-item:hover .main-exhibition-client-ui {
+    border-color: #ccc;
+}
+
+.main-exhibition-client-item > input:checked + .main-exhibition-client-ui {
+    border-color: #ff6a00;
+
+    background: #fffaf7;
+
+    box-shadow: 0 0 0 1px #ff6a00 inset;
+}
+
+
+
+/* =========================================================
+   CLIENT SCROLLBAR
+   ========================================================= */
+
+.main-exhibition-client-list::-webkit-scrollbar {
+    height: 5px;
+}
+
+.main-exhibition-client-list::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+    background: #f1f1f1;
+}
+
+.main-exhibition-client-list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background: #ccc;
+}
+
+.main-exhibition-client-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+
+
+/* =========================================================
+   CLIENT LOGO
+   ========================================================= */
+
+.main-exhibition-client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 44px;
+
+    flex: 0 0 auto;
+
+    overflow: hidden;
+
+    padding: 6px;
+
+    border-radius: 5px;
+
+    background: #111;
+}
+
+.main-exhibition-client-logo img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================================
+   CLIENT NAME
+   ========================================================= */
+
+.main-exhibition-client-name {
+    display: block;
+
+    min-width: 0;
+}
+
+.main-exhibition-client-name strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #333;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-client-name em {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #c36827;
+
+    font-size: 8px;
+    font-style: normal;
+}
+
+
+
+/* =========================================================
+   CLIENT CHECK
+   ========================================================= */
+
+.main-exhibition-client-check {
+    position: absolute;
+
+    top: 50%;
+    right: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 19px;
+    height: 19px;
+
+    border: 1px solid #ddd;
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: transparent;
+
+    transform: translateY(-50%);
+}
+
+.main-exhibition-client-item > input:checked + .main-exhibition-client-ui .main-exhibition-client-check {
+    border-color: #ff6a00;
+
+    background: #ff6a00;
+
+    color: #fff;
+}
+
+.main-exhibition-client-check i {
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media all and (max-width: 768px) {
+
+    .main-exhibition-client-list {
+        grid-auto-columns: 170px;
+    }
+
+}
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.main-exhibition-current-video {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: 720px;
+
+    margin-bottom: 12px;
+    padding: 12px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+
+    background: #fafafa;
+}
+
+.main-exhibition-video-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 auto;
+
+    border-radius: 6px;
+
+    background: #222;
+
+    color: #fff;
+}
+
+.main-exhibition-video-icon i {
+    font-size: 17px;
+}
+
+.main-exhibition-current-video-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.main-exhibition-current-video-info strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #444;
+
+    font-size: 10px;
+}
+
+.main-exhibition-current-video-info span {
+    display: block;
+
+    overflow: hidden;
+
+    color: #999;
+
+    font-size: 9px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-exhibition-video-delete {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    flex: 0 0 auto;
+
+    cursor: pointer;
+}
+
+.main-exhibition-video-delete input {
+    width: 14px;
+    height: 14px;
+
+    accent-color: #ff6a00;
+}
+
+.main-exhibition-video-delete span {
+    color: #777;
+
+    font-size: 9px;
+}
+
+.main-exhibition-file {
+    max-width: 720px;
+}
+
+.main-exhibition-file input[type="file"] {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #666;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================================
+   COLOR FIELD
+   ========================================================= */
+
+.main-exhibition-color-field {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    max-width: 300px;
+}
+
+.main-exhibition-color-field input[type="color"] {
+    width: 44px;
+    height: 40px;
+
+    flex: 0 0 auto;
+
+    padding: 3px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    cursor: pointer;
+}
+
+.main-exhibition-color-field input[type="text"] {
+    width: 140px;
+    height: 40px;
+
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================================
+   SIDE
+   ========================================================= */
+
+.main-exhibition-side-field {
+    margin-bottom: 22px;
+}
+
+.main-exhibition-side-field:last-child {
+    margin-bottom: 0;
+}
+
+.main-exhibition-side-field > label,
+.main-exhibition-side-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #444;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.main-exhibition-side-field > input[type="number"] {
+    width: 100%;
+    height: 40px;
+}
+
+.main-exhibition-side-field > p {
+    margin: 7px 0 0;
+
+    color: #999;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+
+/* =========================================================
+   ACTIVE SELECT
+   ========================================================= */
+
+.main-exhibition-active-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 6px;
+}
+
+.main-exhibition-active-select label {
+    display: block;
+
+    cursor: pointer;
+}
+
+.main-exhibition-active-select input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.main-exhibition-active-select span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 38px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #777;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.main-exhibition-active-select input:checked + span {
+    border-color: #ff6a00;
+
+    background: #fff5ee;
+
+    color: #ff6a00;
+}
+
+
+
+/* =========================================================
+   ACTIVE INFO
+   ========================================================= */
+
+.main-exhibition-active-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid #eee;
+}
+
+.main-exhibition-active-info > span {
+    color: #888;
+
+    font-size: 9px;
+}
+
+.main-exhibition-active-info > strong {
+    color: #222;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.main-exhibition-active-info em {
+    color: #aaa;
+
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.main-exhibition-side-notice {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 5px;
+
+    margin: 12px 0 0;
+    padding: 10px;
+
+    border-radius: 5px;
+
+    background: #fff6ef;
+
+    color: #b75d1c;
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+.main-exhibition-side-notice i {
+    flex: 0 0 auto;
+
+    margin-top: 1px;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   WRITE INFO
+   ========================================================= */
+
+.main-exhibition-write-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-exhibition-write-info > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.main-exhibition-write-info > div:first-child {
+    padding-top: 0;
+}
+
+.main-exhibition-write-info > div:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.main-exhibition-write-info span {
+    color: #999;
+
+    font-size: 9px;
+}
+
+.main-exhibition-write-info strong {
+    color: #555;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   SAVE
+   ========================================================= */
+
+.main-exhibition-save {
+    width: 100%;
+    height: 46px;
+}
+
+.main-exhibition-save[disabled] {
+    opacity: .55;
+
+    cursor: default;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 1250px) {
+
+    .main-exhibition-write-layout {
+        grid-template-columns: minmax(0, 1fr) 280px;
+    }
+
+    .main-exhibition-client-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media all and (max-width: 1050px) {
+
+    .main-exhibition-write-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .main-exhibition-write-side {
+        position: static;
+    }
+
+}
+
+
+@media all and (max-width: 768px) {
+
+    .main-exhibition-field {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .main-exhibition-field-label {
+        padding-top: 0;
+    }
+
+    .main-exhibition-work-list {
+        grid-template-columns: 1fr;
+    }
+
+    .main-exhibition-client-list {
+        grid-template-columns: 1fr;
+    }
+
+    .main-exhibition-current-video {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .main-exhibition-video-delete {
+        width: 100%;
+
+        margin-top: 3px;
+        padding-top: 9px;
+
+        border-top: 1px solid #eee;
+    }
+
+}
+
+
+.main-exhibition-client-list {
+    display: grid;
+
+    grid-template-rows: repeat(3, 66px);
+    grid-auto-flow: column;
+    grid-auto-columns: 190px;
+
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 2px 2px 10px;
+
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   MAIN EXHIBITION IMAGE PREVIEW
+   ========================================================= */
+
+.main-exhibition-image-preview {
+    position: relative;
+
+    width: 100%;
+    max-width: 300px;
+
+    overflow: hidden;
+
+    aspect-ratio: 3 / 4;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    background: #f5f5f5;
+}
+
+.main-exhibition-image-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.main-exhibition-image-preview.empty img {
+    display: none;
+}
+
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.main-exhibition-image-empty {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 100%;
+    height: 100%;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+.main-exhibition-image-preview.empty .main-exhibition-image-empty {
+    display: flex;
+}
+
+.main-exhibition-image-empty i {
+    color: #bbb;
+
+    font-size: 28px;
+}
+
+.main-exhibition-image-empty span {
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================================
+   CURRENT FILE
+   ========================================================= */
+
+.main-exhibition-current-file {
+    margin: 8px 0 0;
+
+    color: #999;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.main-exhibition-current-file strong {
+    color: #555;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================================================
+   IMAGE FILE INPUT
+   ========================================================= */
+
+.main-exhibition-image-preview + .main-exhibition-file {
+    max-width: 720px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media all and (max-width: 768px) {
+
+    .main-exhibition-image-preview {
+        max-width: none;
+    }
+
+}

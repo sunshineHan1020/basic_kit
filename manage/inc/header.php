@@ -1,4 +1,62 @@
-<?include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/head.php';?>
+<?include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/head.php';
+
+
+
+
+
+$company_brochure =
+    false;
+
+
+$query = "
+
+    SELECT
+
+        cb.id,
+        cb.title,
+        cb.media_id,
+        cb.created_at,
+        cb.updated_at,
+
+        m.storage_key,
+        m.original_name,
+        m.mime_type,
+        m.byte_size
+
+    FROM company_brochures cb
+
+    INNER JOIN media m
+        ON m.id = cb.media_id
+        AND m.deleted_at IS NULL
+
+    WHERE
+        cb.is_active = 1
+
+    ORDER BY
+        cb.sort_order ASC,
+        cb.id DESC
+
+    LIMIT 1
+
+";
+
+
+$ps =
+    pdo_query(
+        $db,
+        $query,
+        array()
+    );
+
+
+$company_brochure =
+    $ps->fetch(
+        PDO::FETCH_ASSOC
+    );
+?>
+
+
+?>
 <!-- ===========================
     Sidebar
 ============================ -->
@@ -58,10 +116,26 @@
             </li>
 
 
+			 <li class="">
+
+                <a href="/manage/main_exhibition_list.php">
+
+                    <div class="menu-left">
+                        <i class="ri-dashboard-line"></i>
+                        <span>메인 전시</span>
+                    </div>
+
+
+                </a>
+
+            </li>
+
+
+
 
     
 
-
+			
             <!-- Works -->
             <li class="has-sub">
 

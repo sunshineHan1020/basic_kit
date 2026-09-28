@@ -682,34 +682,18 @@ $(function(){
 			const TEXT_DEFS_ORDER = [
 				{
 					shape: 'circle',
-					title:	'Off-line <br class="only-mo"> Experience+',
-					text:	`<span class="first">
-								팝업 익스피리언스를 필두로 모든 <br class="only-mo"> 
-								오프라인 경험을 제공합니다.
-							 </span>
-							 <span>기획부터 실행까지, 한 창구에서 모두 가능합니다.</span>
-							 <span>OOH, 페이드 미디어 등을 더해 더 넓은 접근까지 가능합니다.</span>`
+                    title: window.weekendsMainCopy['circle_title'],
+                    text: window.weekendsMainCopy['circle_text']
 				},
 				{
-					shape:	'triangle',
-					title:	'Design',
-					text:	`<span class="first">
-								평면에서 공간에 이르는 디자인 <br class="only-mo"> 
-								일체를 제공합니다.
-							 </span>
-							 <span>
-							 	결과물의 핵심이 되는 디자인. 모든 아이디어를 시각화하고 <br> 
-								제작, 감리, 실행까지 주도하여 직접 완성합니다.
-							 </span>`
+					shape: 'triangle',
+                    title: window.weekendsMainCopy['triangle_title'],
+                    text: window.weekendsMainCopy['triangle_text']
 				},
 				{
-					shape:	'square',
-					title:	'PR, Viral',
-					text:	`<span class="first">
-								좋은 이벤트를 꾸리는 것 만큼 <br> 
-								알리는 활동의 중요도가 높아지고 <br class="only-mo"> 있습니다.
-							 </span>
-							 <span>최적화된 스피커를 통해 멀리, 많이 알려드립니다.</span>`
+					shape: 'square',
+                    title: window.weekendsMainCopy['square_title'],
+                    text: window.weekendsMainCopy['square_text']
 				},
 			];
 			const TEXT_DEFS = isMobile ? [...TEXT_DEFS_ORDER].reverse() : TEXT_DEFS_ORDER;
@@ -1336,7 +1320,7 @@ $(function(){
 			if (!galleries.marquee.dataset.motionMarqueeReady) {
 				motionMarquee({
 					target : '.section.gallery .marquee .inner',
-					text   : 'THE PEOPLE BEHIND WEEKENDS',
+					text   : window.weekendsMainCopy.gallery_marquee,
 					speed  : 2,
 					cnt    : 10,
 				});

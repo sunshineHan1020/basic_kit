@@ -48,10 +48,10 @@ if(
                     <div class="shape-wrap changes changes-01">
                         <div class="text-wrap pack-down items-center gap-40-20 ta-c">
                             <h3 class="title fc-white lh100">
-                                <strong>We shape <br class="only-mo"> SCENE</strong>
+                                <strong><?=wc_h(wc_text($pageContent, 'visual_01'))?> <br class="only-mo"> <?=wc_h(wc_text($pageContent, 'visual_02'))?></strong>
                             </h3>
                             <p class="desc fc-white lh160">
-                                <span>경이로운 장면을 만들고</span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_03'))?></span>
                             </p>
                         </div>
                     </div>
@@ -59,10 +59,10 @@ if(
                     <div class="shape-wrap changes changes-02">
                         <div class="text-wrap pack-down items-center gap-40-20 ta-c">
                             <h3 class="title fc-white lh100">
-                                <strong>We shape <br class="only-mo"> EXPERIENCE</strong>
+                                <strong><?=wc_h(wc_text($pageContent, 'visual_04'))?> <br class="only-mo"> <?=wc_h(wc_text($pageContent, 'visual_05'))?></strong>
                             </h3>
                             <p class="desc fc-white lh160">
-                                <span>관계맺는 경험을 빚어</span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_06'))?></span>
                             </p>
                         </div>
                     </div>
@@ -70,10 +70,10 @@ if(
                     <div class="shape-wrap changes changes-03">
                         <div class="text-wrap pack-down items-center gap-40-20 ta-c">
                             <h3 class="title fc-white lh100">
-                                <strong>We shape <br class="only-mo"> WEEKENDS</strong>
+                                <strong><?=wc_h(wc_text($pageContent, 'visual_07'))?> <br class="only-mo"> <?=wc_h(wc_text($pageContent, 'visual_08'))?></strong>
                             </h3>
                             <p class="desc fc-white lh160">
-                                <span>잊지 못할 주말을 선물합니다.</span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_09'))?></span>
                             </p>
                         </div>
                     </div>
@@ -82,10 +82,10 @@ if(
                     <div class="shape-wrap lines lines-01">
                         <div class="text-wrap">
                             <p class="text">
-                                <span>오프라인 이벤트의 피크는 주말.</span>
-                                <span>현장과 사무실을 지키는 일이 잦았습니다.</span>
-                                <span>어느새 주말은,</span>
-                                <span>우리의 노력과 결실을 의미하는 정체성이 되었습니다.</span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_10'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_11'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_12'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_13'))?></span>
                             </p>
                         </div>
                     </div>
@@ -93,11 +93,11 @@ if(
                     <div class="shape-wrap lines lines-02">
                         <div class="text-wrap">
                             <p class="text">
-                                <span>안녕하세요.</span>
-                                <span>주말을 만드는 사람들, 위켄즈입니다.</span>
-                                <span>우리가 가장 잘 하는 팝업 익스피리언스를 매개로</span>
-                                <span>브랜드와 고객이 가장 가까운 거리에서 만나 관계맺도록 돕고</span>
-                                <span>행복한 주말처럼 오롯이 기억되는 순간과 경험을 빚습니다.</span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_14'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_15'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_16'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_17'))?></span>
+                                <span><?=wc_h(wc_text($pageContent, 'visual_18'))?></span>
                             </p>
                         </div>
                     </div>
@@ -558,15 +558,15 @@ if(
             <div class="gallery-wrap side-01">
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento01.jpg" alt="SUPERCELL | 슈퍼셀">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_01', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_01', 'alt_text'))?>">
                 </div>
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento04.jpg" alt="NEXON | 넥슨">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_04', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_04', 'alt_text'))?>">
                 </div>
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento07.jpg" alt="DEVSISTERS | 데브시스터즈">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_07', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_07', 'alt_text'))?>">
                 </div>
 
             </div>
@@ -575,16 +575,16 @@ if(
             <div class="gallery-wrap gallery">
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento02.jpg" alt="Riot Games | 라이엇 게임즈">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_02', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_02', 'alt_text'))?>">
                 </div>
 
                 <div class="img-wrap gallery">
-                    <span class="blind">Weekends | 위켄즈</span>
-                    <div class="img"></div>
+                    <span class="blind"><?=wc_h(wc_text($pageContent, 'gallery_01'))?></span>
+                    <div class="img" style="background-image: url('<?=wc_h(wc_image($pageImages, 'main_gallery_05', 'storage_key'))?>')"></div>
                 </div>
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento08.jpg" alt="NAVER | 네이버">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_08', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_08', 'alt_text'))?>">
                 </div>
 
             </div>
@@ -593,15 +593,15 @@ if(
             <div class="gallery-wrap side-03">
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento03.jpg" alt="AMOREPACIFIC | 아모레퍼시픽">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_03', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_03', 'alt_text'))?>">
                 </div>
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento06.jpg" alt="KRAFTON | 크래프톤">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_06', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_06', 'alt_text'))?>">
                 </div>
 
                 <div class="img-wrap">
-                    <img src="../@resource/images/main/bento09.jpg" alt="KIA | 기아">
+                    <img src="<?=wc_h(wc_image($pageImages, 'main_gallery_09', 'storage_key'))?>" alt="<?=wc_h(wc_image($pageImages, 'main_gallery_09', 'alt_text'))?>">
                 </div>
 
             </div>
@@ -635,20 +635,20 @@ if(
                     <h2 class="title fc-white uppercase ta-c fw400 lh130">
 
                         <span class="split only-pc">
-                            <span>What We've</span>
+                            <span><?=wc_h(wc_text($pageContent, 'achieve_01'))?></span>
                         </span>
 
 
                         <span class="split only-mo">
-                            <span>What</span>
+                            <span><?=wc_h(wc_text($pageContent, 'achieve_02'))?></span>
                         </span>
 
                         <span class="split only-mo">
-                            <span>We've</span>
+                            <span><?=wc_h(wc_text($pageContent, 'achieve_03'))?></span>
                         </span>
 
                         <span class="split">
-                            <span>Achieved</span>
+                            <span><?=wc_h(wc_text($pageContent, 'achieve_04'))?></span>
                         </span>
 
                     </h2>
@@ -670,10 +670,10 @@ if(
 
                                     <strong>
 
-                                        기업신용등급 <br>
+                                        <?=wc_h(wc_text($pageContent, 'achieve_05'))?> <br>
 
                                         <span class="fw600">
-                                            (2025)
+                                            <?=wc_h(wc_text($pageContent, 'achieve_06'))?>
                                         </span>
 
                                     </strong>
@@ -685,8 +685,8 @@ if(
 
                                     <span>
 
-                                        한국기술신용평가 <br>
-                                        KB국민은행
+                                        <?=wc_h(wc_text($pageContent, 'achieve_07'))?> <br>
+                                        <?=wc_h(wc_text($pageContent, 'achieve_08'))?>
 
                                     </span>
 
@@ -700,7 +700,7 @@ if(
                                 <p class="totals fc-white lh100">
 
                                     <strong>
-                                        A
+                                        <?=wc_h(wc_text($pageContent, 'achieve_09'))?>
                                     </strong>
 
                                 </p>
@@ -722,7 +722,7 @@ if(
                                 <h3 class="title fc-white lh125">
 
                                     <strong>
-                                        파트너사
+                                        <?=wc_h(wc_text($pageContent, 'achieve_10'))?>
                                     </strong>
 
                                 </h3>
@@ -731,7 +731,7 @@ if(
                                 <p class="text fc-white-60 lh125 fw400">
 
                                     <span>
-                                        2025
+                                        <?=wc_h(wc_text($pageContent, 'achieve_11'))?>
                                     </span>
 
                                 </p>
@@ -744,7 +744,7 @@ if(
                                 <p class="totals fc-white lh100">
 
                                     <strong>
-                                        150+
+                                        <?=wc_h(wc_text($pageContent, 'achieve_12'))?>
                                     </strong>
 
                                 </p>
@@ -766,7 +766,7 @@ if(
                                 <h3 class="title fc-white lh125">
 
                                     <span>
-                                        현장 참가자
+                                        <?=wc_h(wc_text($pageContent, 'achieve_13'))?>
                                     </span>
 
                                 </h3>
@@ -775,7 +775,7 @@ if(
                                 <p class="text fc-white-60 lh125 fw400">
 
                                     <span>
-                                        2025
+                                        <?=wc_h(wc_text($pageContent, 'achieve_14'))?>
                                     </span>
 
                                 </p>
@@ -788,7 +788,7 @@ if(
                                 <p class="totals fc-white lh100">
 
                                     <strong>
-                                        600K+
+                                        <?=wc_h(wc_text($pageContent, 'achieve_15'))?>
                                     </strong>
 
                                 </p>

@@ -62,6 +62,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
     </div>
     <section class="card member-roster-card">
         <h3>파트별 명단</h3>
+        <p><a href="/manage/page_content?page=about" class="btn btn-white">어바웃 문구 관리</a></p>
         <p class="member-help">HQ · ART · PLAN · HLDYS는 고정입니다. 입력한 이름, 쉼표, 줄바꿈을 그대로 저장합니다. 아래 이미지 목록과는 별도로 관리됩니다.</p>
         <form id="member-roster-form" action="/manage/proc/member_roster_save" method="post">
             <input type="hidden" name="csrf_token" value="<?=member_h($member_csrf)?>">
@@ -74,6 +75,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
             <div class="member-form-actions"><button type="submit" id="member-roster-save" class="btn btn-primary">명단 저장</button></div>
         </form>
     </section>
+    <?php $contentEditorGroup = 'team'; include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/content_editor.php'; ?>
     <div class="member-summary">
         <div class="member-summary-item"><span>전체 등록</span><strong><?=number_format($summary['total'])?></strong></div>
         <div class="member-summary-item"><span>노출</span><strong><?=number_format($summary['active'])?></strong></div>
@@ -266,3 +268,4 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
 $member_footer = $_SERVER['DOCUMENT_ROOT'].'/manage/inc/footer.php';
 if (is_file($member_footer)) { include $member_footer; } else { echo '</body></html>'; }
 ?>
+

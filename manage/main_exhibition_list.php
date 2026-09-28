@@ -632,6 +632,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/header.php';
              SUMMARY
         ================================================== -->
 
+        <?php $contentEditorGroup = 'main'; include $_SERVER['DOCUMENT_ROOT'].'/manage/inc/content_editor.php'; ?>
         <div class="main-exhibition-summary">
 
 

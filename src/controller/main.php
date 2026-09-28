@@ -1,6 +1,9 @@
 <?php
 
 include $_SERVER['DOCUMENT_ROOT'].'/src/controller/head.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/lib/site_content.php';
+$pageContent = wc_load_texts($db, 'main');
+$pageImages = wc_load_images($db, 'main');
 
 
 
@@ -465,6 +468,7 @@ $data['line_text'] =
  * =========================================================
  */
 
+include $_SERVER['DOCUMENT_ROOT'].'/lib/site_content_motion.php';
 include $_SERVER['DOCUMENT_ROOT'].'/src/view/main.php';
 
 
@@ -502,6 +506,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/src/controller/footer.php';
 <script src="/@resource/js/lib/matter.min.js"></script>
 
 <script src="/@resource/js/motion.js"></script>
+<script>window.weekendsMainCopy = <?=json_encode($mainMotionCopy, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT)?>;</script>
 <script src="/@resource/js/main.js"></script>
 
 </body>

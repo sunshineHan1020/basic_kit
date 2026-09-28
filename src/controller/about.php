@@ -1,5 +1,8 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/src/controller/head.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/lib/site_content.php';
+$pageContent = wc_load_texts($db, 'about');
+$pageImages = wc_load_images($db, 'team');
 
 $aboutEscape = function ($value) {
     return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
@@ -27,9 +30,9 @@ foreach (array('HQ' => 'hq_text', 'ART' => 'art_text', 'PLAN' => 'plan_text', 'H
 
 // Keep the original group photo first. Personal images follow the CMS order.
 $aboutTeamImages = array(array(
-    'name' => 'Weekends',
-    'image_url' => '/@resource/images/about/team-1.jpg',
-    'mobile_image_url' => '/@resource/images/about/team-1.png'
+    'name' => wc_image($pageImages, 'team_group_desktop', 'alt_text'),
+    'image_url' => wc_image($pageImages, 'team_group_desktop', 'storage_key'),
+    'mobile_image_url' => wc_image($pageImages, 'team_group_mobile', 'storage_key')
 ));
 $statement = $aboutQuery('SELECT t.member_name, m.storage_key, mm.storage_key AS mobile_storage_key
     FROM team_members t

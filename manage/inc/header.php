@@ -289,6 +289,8 @@ $company_brochure =
                 </a>
 
             </li>
+            <li><a href="/manage/page_content?page=about"><div class="menu-left"><i class="ri-text"></i><span>어바웃 문구</span></div></a></li>
+
 
 
 
